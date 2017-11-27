@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+xrandr | grep "VGA" | grep " disconnected " > /dev/null
+if [ $? -eq 0 ]; then
+  echo ""
+  echo "✘  Hmm, looks like your VGA monitor is disconnected. Please plug it in and try again. Exited."
+  exit
+fi
+echo "✔  VGA monitor plugged in."
+
+xrandr --output VGA-1 --auto
+echo "✔  VGA monitor has been enabled."
+
+xrandr --output VGA-1 --left-of eDP-1
+echo "✔  VGA monitor has been set to the left of your laptop monitor."
+
+echo "Running Popcorn time..."
+echo "Enjoy!"
+~/Downloads/popcorntime/Popcorn-Time
