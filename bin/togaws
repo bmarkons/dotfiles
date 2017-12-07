@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if [ -f ~/.aws/credentials ]
+then
+  mv ~/.aws/credentials{,.bkp}
+else
+  mv ~/.aws/credentials{.bkp,}
+fi
