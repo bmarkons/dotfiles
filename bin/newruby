@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-
-# Creates new bash script ready to be run
+set -euo pipefail
 
 if [ -z "$1" ]
 then
@@ -10,7 +9,6 @@ fi
 
 touch $1
 chmod +x $1
-echo "#!/usr/bin/env bash" >> $1
-echo "set -euo pipefail" >> $1
+echo "#!/usr/bin/env ruby" >> $1
 
 vim $1
