@@ -31,3 +31,11 @@ alias ii="iex -S mix"
 # aws
 alias aws-on="mv ~/.aws/credentials.bkp ~/.aws/credentials"
 alias aws-off="mv ~/.aws/credentials ~/.aws/credentials.bkp"
+
+# k8s
+alias kub="kubectl"
+
+#git
+alias glum="git pull upstream master"
+
+alias berac="bundle exec rubocop --auto-correct"

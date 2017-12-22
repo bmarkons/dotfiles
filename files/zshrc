@@ -30,3 +30,9 @@ if [ -d $HOME/go-code ]; then
   export GOPATH=$HOME/go-code
   export PATH=$HOME/go-code/bin:$PATH
 fi
+
+if [ $commands[kubectl] ]; then
+  source <(kubectl completion zsh)
+fi
+
+export PATH=~/.local/bin:$PATH

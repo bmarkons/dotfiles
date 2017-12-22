@@ -116,4 +116,10 @@ augroup MyColors
   autocmd ColorScheme desert hi SpellBad ctermfg=Black ctermbg=Red
 augroup end
 
+set tabstop=2 
+set shiftwidth=2 
+set expandtab
+
+set number
+
 nnoremap <silent><leader>ee :!clear && elixir %<cr>

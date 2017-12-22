@@ -12,3 +12,7 @@ setopt incappendhistory  # Immediately append to the history file, not just when
 source ~/.key_bindings
 source ~/.prompt
 source ~/.aliases
+
+if [ $commands[kubectl] ]; then
+  source <(kubectl completion zsh)
+fi

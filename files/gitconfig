@@ -1,6 +1,6 @@
 [user]
   email = mamaveb@gmail.com
-  name = bmarkons 
+  name = bmarkons
 
 [push]
   default = current
@@ -25,8 +25,8 @@
   amend = !git add -A && git commit --amend --no-edit
   files = diff --name-only origin/master
   bootstrap =!git init . && git add . && git commit -m "Bootstrap"
-  sync = !git pull origin master && git push shiroyasha master
-  fork = !hub fork && git config remote.pushDefault shiroyasha
+  sync = !git pull upstream master && git push origin master
+  fork = !hub fork && git config remote.pushDefault origin
 
 [color]
   diff   = auto
