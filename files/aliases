@@ -34,6 +34,11 @@ alias aws-off="mv ~/.aws/credentials ~/.aws/credentials.bkp"
 
 # k8s
 alias kub="kubectl"
+alias gc="gcloud"
+alias gccc="gcloud config configurations"
+alias gccg="gcloud container clusters get-credentials"
+alias kcx="kubectx"
+alias kcn="kubens"
 
 #git
 alias glum="git pull upstream master"

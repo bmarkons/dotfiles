@@ -36,3 +36,5 @@ if [ $commands[kubectl] ]; then
 fi
 
 export PATH=~/.local/bin:$PATH
+
+export GEMFURY_PASSWORD=ULFsQwtbgzdjc54AE3o-
