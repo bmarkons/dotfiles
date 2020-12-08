@@ -29,10 +29,13 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'renderedtext/vim-elixir-alternative-files'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'shiroyasha/make-test'
+Plug 'mhinz/vim-mix-format'
 
 call plug#end()
 
 runtime macros/matchit.vim               " Enables % to cycle through `if/else/endif`, recognizing Ruby blocks, etc.
+
+let g:mix_format_on_save = 1             " Run mix formatter every time file changes are written
 
 let g:vimfiler_safe_mode_by_default = 0  " disable safe mode for VimFiler
 
@@ -136,32 +139,6 @@ map vimconfig :e ~/.config/nvim/init.vim<cr>
 let g:ag_prg="ag --nocolor --nogroup --column"
 nmap <leader>a :Ag! ""<Left>
 nmap <leader>A :Ag! <C-r><C-w>
-
-" vim-test
-nmap <silent> <leader>t :TestNearest<CR>
-nmap <silent> <leader>T :TestFile<CR>
-nmap <silent> <leader>g :TestVisit<CR>
-let test#strategy="neovim"
-
-let test#ruby#rspec#executable = './script/rspec'
-
-function! DockerTransform(cmd) abort
-  " Idea (but doesn't work)
-  "
-  " check if docker-compose is up
-  "   if yes => run docker exec app ...
-  "   else   => start service => run docker exec app ...
-  "
-  let newcmd='[[ $(docker-compose ps -q app | head -1) == "" ]] && docker-compose run --rm -d app sleep infinity; docker exec -t $(docker-compose ps -q app | head -1) '.a:cmd
-
-  " " Simple idea
-  " let newcmd='docker-compose run --rm app '.a:cmd
-
-  return newcmd
-endfunction
-
-let g:test#custom_transformations = {'docker': function('DockerTransform')}
-let g:test#transformation = 'docker'
 
 nnoremap <silent><leader><leader> :call ElixirAlternateFile()<cr>
 

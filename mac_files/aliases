@@ -9,7 +9,7 @@ alias dot="cd ~/dotfiles && ./install && cd -"
 # generic
 alias zz="source ~/.zshrc"
 alias ll="ls -lah"
-alias v="vim"
+alias v="nvim"
 alias g="git"
 alias dc="docker-compose"
 alias grp="grep -rni"
