@@ -30,8 +30,11 @@ Plug 'renderedtext/vim-elixir-alternative-files'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'shiroyasha/make-test'
 Plug 'mhinz/vim-mix-format'
+Plug 'dunckr/js_alternate.vim'
 
 call plug#end()
+
+autocmd FileType javascript nnoremap <buffer> <leader><leader> :call js_alternate#run()<cr>
 
 runtime macros/matchit.vim               " Enables % to cycle through `if/else/endif`, recognizing Ruby blocks, etc.
 
