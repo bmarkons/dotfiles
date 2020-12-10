@@ -161,6 +161,9 @@ map <leader>o :only<cr>
 " exit nvim
 map <leader>q :x<cr>
 
+" write file
+map <leader>w :w<cr>
+
 " disable cursor keys in normal mode
 map <Left>  :echo "no! use h!"<cr>
 map <Down>  :echo "no! use j!"<cr>
