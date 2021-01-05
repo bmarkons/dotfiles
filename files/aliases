@@ -44,3 +44,7 @@ alias kcn="kubens"
 alias glum="git pull upstream master"
 
 alias berac="bundle exec rubocop --auto-correct"
+
+function kw() {
+  watch "kubectl get pods | grep $1";
+}
