@@ -17,3 +17,4 @@ if [ $commands[kubectl] ]; then
 fi
 
 export PATH=~/.local/bin:$PATH
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"

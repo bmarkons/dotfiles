@@ -37,8 +37,9 @@ alias kub="kubectl"
 alias gc="gcloud"
 alias gccc="gcloud config configurations"
 alias gccg="gcloud container clusters get-credentials"
-alias kcx="kubectx"
-alias kcn="kubens"
+alias kcx="kubectl ctx"
+alias kcn="kubectl ns"
+alias kcp="kubectl get pods"
 
 #git
 alias glum="git pull upstream master"
